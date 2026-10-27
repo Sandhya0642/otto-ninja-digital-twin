@@ -33,7 +33,8 @@
       <freejoint name="root"/>
       <inertial pos="0 0 0" mass="0.20" diaginertia="0.00045 0.00055 0.00065"/>
       <geom name="torso_visual" type="mesh" mesh="body_mesh" material="body_mat" contype="0" conaffinity="0"/>
-      <geom name="torso_collision" type="box" size="0.055 0.0375 0.04" mass="0.20" rgba="0.16 0.68 0.70 0.25"/>
+      <geom name="torso_collision" type="box" size="0.055 0.0375 0.04" rgba="0.16 0.68 0.70 0.25"/>
+      <site name="imu_site" pos="0 0 0" size="0.002" rgba="1 0 0 1"/>
       <body name="head" pos="0 0 0.067">
         <joint name="head_joint" type="hinge" axis="0 0 1" range="-1.5708 1.5708" damping="0.02"/>
         <inertial pos="0 0 0" mass="0.10" diaginertia="0.00012 0.00013 0.00016"/>
