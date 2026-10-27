@@ -31,7 +31,7 @@
   <link name="left_foot_link">
     <inertial><origin xyz="0 0 0"/><mass value="0.045"/><inertia ixx="0.00006" ixy="0" ixz="0" iyy="0.00008" iyz="0" izz="0.00006"/></inertial>
     <visual><origin xyz="0 0 0" rpy="1.5707963 0 0"/><geometry><mesh filename="package://otto_ninja_twin/meshes/otto_ninja_wheel.stl"/></geometry><material name="blue"/></visual>
-    <collision><origin xyz="0 0 0"/><geometry><cylinder radius="0.036" length="0.027"/></geometry></collision>
+    <collision><origin xyz="0 0 0" rpy="1.5707963 0 0"/><geometry><cylinder radius="0.036" length="0.027"/></geometry></collision>
   </link>
   <joint name="left_foot_servo" type="continuous">
     <parent link="left_leg_link"/><child link="left_foot_link"/><origin xyz="0 0 -0.078"/><axis xyz="0 1 0"/><dynamics damping="0.015" friction="0.01"/>
@@ -48,7 +48,7 @@
   <link name="right_foot_link">
     <inertial><origin xyz="0 0 0"/><mass value="0.045"/><inertia ixx="0.00006" ixy="0" ixz="0" iyy="0.00008" iyz="0" izz="0.00006"/></inertial>
     <visual><origin xyz="0 0 0" rpy="1.5707963 0 0"/><geometry><mesh filename="package://otto_ninja_twin/meshes/otto_ninja_wheel.stl"/></geometry><material name="blue"/></visual>
-    <collision><geometry><cylinder radius="0.036" length="0.027"/></geometry></collision>
+    <collision><origin xyz="0 0 0" rpy="1.5707963 0 0"/><geometry><cylinder radius="0.036" length="0.027"/></geometry></collision>
   </link>
   <joint name="right_foot_servo" type="continuous">
     <parent link="right_leg_link"/><child link="right_foot_link"/><origin xyz="0 0 -0.078"/><axis xyz="0 1 0"/><dynamics damping="0.015" friction="0.01"/>
