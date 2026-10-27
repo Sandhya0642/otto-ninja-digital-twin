@@ -1,0 +1,170 @@
+solid otto_ninja_body_reconstructed
+facet normal 0.000000 0.000000 -1.000000
+ outer loop
+  vertex -0.055000 -0.037500 -0.040000
+  vertex 0.055000 0.037500 -0.040000
+  vertex 0.055000 -0.037500 -0.040000
+ endloop
+endfacet
+facet normal 0.000000 0.000000 -1.000000
+ outer loop
+  vertex -0.055000 -0.037500 -0.040000
+  vertex -0.055000 0.037500 -0.040000
+  vertex 0.055000 0.037500 -0.040000
+ endloop
+endfacet
+facet normal 0.000000 0.000000 1.000000
+ outer loop
+  vertex -0.055000 -0.037500 0.040000
+  vertex 0.055000 -0.037500 0.040000
+  vertex 0.055000 0.037500 0.040000
+ endloop
+endfacet
+facet normal 0.000000 0.000000 1.000000
+ outer loop
+  vertex -0.055000 -0.037500 0.040000
+  vertex 0.055000 0.037500 0.040000
+  vertex -0.055000 0.037500 0.040000
+ endloop
+endfacet
+facet normal 0.000000 -1.000000 0.000000
+ outer loop
+  vertex -0.055000 -0.037500 -0.040000
+  vertex 0.055000 -0.037500 -0.040000
+  vertex 0.055000 -0.037500 0.040000
+ endloop
+endfacet
+facet normal 0.000000 -1.000000 0.000000
+ outer loop
+  vertex -0.055000 -0.037500 -0.040000
+  vertex 0.055000 -0.037500 0.040000
+  vertex -0.055000 -0.037500 0.040000
+ endloop
+endfacet
+facet normal 1.000000 0.000000 0.000000
+ outer loop
+  vertex 0.055000 -0.037500 -0.040000
+  vertex 0.055000 0.037500 -0.040000
+  vertex 0.055000 0.037500 0.040000
+ endloop
+endfacet
+facet normal 1.000000 0.000000 0.000000
+ outer loop
+  vertex 0.055000 -0.037500 -0.040000
+  vertex 0.055000 0.037500 0.040000
+  vertex 0.055000 -0.037500 0.040000
+ endloop
+endfacet
+facet normal 0.000000 1.000000 0.000000
+ outer loop
+  vertex 0.055000 0.037500 -0.040000
+  vertex -0.055000 0.037500 -0.040000
+  vertex -0.055000 0.037500 0.040000
+ endloop
+endfacet
+facet normal 0.000000 1.000000 0.000000
+ outer loop
+  vertex 0.055000 0.037500 -0.040000
+  vertex -0.055000 0.037500 0.040000
+  vertex 0.055000 0.037500 0.040000
+ endloop
+endfacet
+facet normal -1.000000 0.000000 0.000000
+ outer loop
+  vertex -0.055000 0.037500 -0.040000
+  vertex -0.055000 -0.037500 -0.040000
+  vertex -0.055000 -0.037500 0.040000
+ endloop
+endfacet
+facet normal -1.000000 0.000000 0.000000
+ outer loop
+  vertex -0.055000 0.037500 -0.040000
+  vertex -0.055000 -0.037500 0.040000
+  vertex -0.055000 0.037500 0.040000
+ endloop
+endfacet
+facet normal 0.000000 0.000000 -1.000000
+ outer loop
+  vertex -0.039500 -0.033500 -0.024500
+  vertex 0.055500 0.033500 -0.024500
+  vertex 0.055500 -0.033500 -0.024500
+ endloop
+endfacet
+facet normal 0.000000 0.000000 -1.000000
+ outer loop
+  vertex -0.039500 -0.033500 -0.024500
+  vertex -0.039500 0.033500 -0.024500
+  vertex 0.055500 0.033500 -0.024500
+ endloop
+endfacet
+facet normal 0.000000 0.000000 1.000000
+ outer loop
+  vertex -0.039500 -0.033500 0.048500
+  vertex 0.055500 -0.033500 0.048500
+  vertex 0.055500 0.033500 0.048500
+ endloop
+endfacet
+facet normal 0.000000 0.000000 1.000000
+ outer loop
+  vertex -0.039500 -0.033500 0.048500
+  vertex 0.055500 0.033500 0.048500
+  vertex -0.039500 0.033500 0.048500
+ endloop
+endfacet
+facet normal 0.000000 -1.000000 0.000000
+ outer loop
+  vertex -0.039500 -0.033500 -0.024500
+  vertex 0.055500 -0.033500 -0.024500
+  vertex 0.055500 -0.033500 0.048500
+ endloop
+endfacet
+facet normal 0.000000 -1.000000 0.000000
+ outer loop
+  vertex -0.039500 -0.033500 -0.024500
+  vertex 0.055500 -0.033500 0.048500
+  vertex -0.039500 -0.033500 0.048500
+ endloop
+endfacet
+facet normal 1.000000 0.000000 0.000000
+ outer loop
+  vertex 0.055500 -0.033500 -0.024500
+  vertex 0.055500 0.033500 -0.024500
+  vertex 0.055500 0.033500 0.048500
+ endloop
+endfacet
+facet normal 1.000000 0.000000 0.000000
+ outer loop
+  vertex 0.055500 -0.033500 -0.024500
+  vertex 0.055500 0.033500 0.048500
+  vertex 0.055500 -0.033500 0.048500
+ endloop
+endfacet
+facet normal 0.000000 1.000000 0.000000
+ outer loop
+  vertex 0.055500 0.033500 -0.024500
+  vertex -0.039500 0.033500 -0.024500
+  vertex -0.039500 0.033500 0.048500
+ endloop
+endfacet
+facet normal 0.000000 1.000000 0.000000
+ outer loop
+  vertex 0.055500 0.033500 -0.024500
+  vertex -0.039500 0.033500 0.048500
+  vertex 0.055500 0.033500 0.048500
+ endloop
+endfacet
+facet normal -1.000000 0.000000 0.000000
+ outer loop
+  vertex -0.039500 0.033500 -0.024500
+  vertex -0.039500 -0.033500 -0.024500
+  vertex -0.039500 -0.033500 0.048500
+ endloop
+endfacet
+facet normal -1.000000 0.000000 0.000000
+ outer loop
+  vertex -0.039500 0.033500 -0.024500
+  vertex -0.039500 -0.033500 0.048500
+  vertex -0.039500 0.033500 0.048500
+ endloop
+endfacet
+endsolid otto_ninja_body_reconstructed
