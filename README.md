@@ -1,50 +1,61 @@
 # Otto Ninja Digital Twin — M.Tech Thesis Starter
 
-This repository is a starting point for developing a digital-twin workflow for an Otto Ninja biped robot.
+An early-stage research workspace with an interactive web dashboard, a simplified MuJoCo XML model, and a ROS 2 command-generation package.
 
-## Aim
-Develop a virtual robot model and compare its commanded motions with the physical Otto Ninja robot, then quantify the mismatch and investigate simple calibration or correction methods.
+## Important status and limitations
+This is a starter scaffold, not a completed or validated digital twin. The web robot animation and response chart are illustrative browser-generated data, not MuJoCo physics results or measurements from a physical robot. Vercel hosts the static dashboard only. MuJoCo and ROS 2 must run on a compatible local computer; no live web-to-ROS bridge or physical robot connection is implemented.
 
-## Proposed workflow
-1. Assemble and test the physical Otto Ninja robot.
-2. Create a robot description (URDF) and visualize it in ROS 2/RViz.
-3. Send repeatable motion commands to the physical robot and the virtual model.
-4. Record measurable outputs (e.g., joint/servo commands, step timing, distance travelled, and turning angle).
-5. Compare physical and simulated outcomes using error metrics.
-6. Evaluate whether calibration or command adjustment reduces the mismatch.
+## Layout
+- `index.html` — dashboard, controls, illustrative chart, experiment log and CSV export
+- `mujoco/otto_ninja.xml` — approximate MuJoCo starter model
+- `requirements-mujoco.txt` — Python dependencies
+- `ros2_ws/src/otto_ninja_twin/` — ROS 2 Python package and example gait command publisher
+- `docs/experiment_protocol.md` — proposed validation protocol
+- `docs/hardware_bridge.md` — hardware integration and safety notes
+- `vercel.json` — static hosting configuration
 
-## Possible thesis contribution
-A practical, low-cost digital-twin framework for a small biped robot, with quantitative physical-versus-virtual motion comparison and a repeatable calibration procedure.
+## Proposed research direction
+Low-cost biped robots can show differences between commanded and actual movement because of servo offsets, mechanical asymmetry, battery variation, and foot contact. The proposed work is to quantify this mismatch and test whether a repeatable calibration procedure improves walking or turning accuracy.
 
-This is a proposed research direction, not a demonstrated novelty yet. The contribution must be validated experimentally and compared with relevant literature.
+Potential contribution to validate: a low-cost simulation-assisted calibration workflow supported by repeated baseline and post-calibration experiments. This is a hypothesis, not an established novelty claim.
 
-## Current status and limitations
-This repository is currently being initialized. Any robot model added later should be treated as an approximate visualization model until its geometry, joint limits, servo positions, and motion are checked against the actual robot. A visual model alone is not a synchronized digital twin.
+## Run the website locally
+Open `index.html` in a modern browser or serve the repository directory using any static file server.
 
-## Planned repository structure
-- `urdf/` — robot description
-- `meshes/` — visual/collision meshes, if needed
-- `launch/` — ROS 2 launch files
-- `rviz/` — RViz configuration
-- `docs/` — setup notes, experiments, and results
+## MuJoCo setup
+With a compatible Python environment:
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements-mujoco.txt
+python -m mujoco.viewer --mjcf mujoco/otto_ninja.xml
+```
+The XML is approximate and requires validation of geometry, inertia, contacts, joint ranges and actuator definitions.
 
-## Requirements (planned)
-- Ubuntu with a compatible ROS 2 distribution
-- RViz2
-- Physical Otto Ninja robot and its controller/firmware for hardware experiments
+## ROS 2 setup
+With a compatible ROS 2 distribution and `colcon` installed:
+```bash
+cd ros2_ws
+source /opt/ros/$ROS_DISTRO/setup.bash
+colcon build --symlink-install
+source install/setup.bash
+ros2 launch otto_ninja_twin gait_command.launch.py
+```
+The node publishes an illustrative `Float64MultiArray` to `/otto_ninja/joint_command`. It is not a MuJoCo bridge or physical hardware driver. Verify the actual controller, servo mapping, units, safe limits and stop behavior before implementing any hardware connection.
 
-Exact ROS 2 package metadata and launch commands will be added after the target ROS 2 distribution and hardware-control interface are confirmed.
+## Proposed experimental procedure
+1. Measure the physical robot's dimensions, servo ranges and calibration offsets.
+2. Define repeatable straight-walk and turning commands.
+3. Collect repeated physical trials using a consistent external measurement method.
+4. Compare commanded and measured heading, displacement and step period.
+5. Apply a documented calibration and repeat the same trials.
+6. Report average errors, variability, failures and limitations.
+7. Compare the approach with related literature before claiming novelty.
 
-## Research questions
-- How closely does the virtual model reproduce the robot's commanded pose and motion?
-- Which factors contribute most to the physical-versus-virtual mismatch?
-- Can a simple calibration or command-correction method reduce the measured error?
+A visual model alone is not a digital twin; a defensible twin needs a validated model and measurable relationship with the physical system. Browser CSV exports contain command-preview metadata only, not scientific outcome measurements.
 
-## Experimental metrics (suggested)
-- Mean absolute error in measured turning angle
-- Distance travelled per command
-- Step-cycle duration
-- Repeatability across repeated trials
+## Safety
+Test on a clear, level surface. Add command validation, timeouts and emergency stop before autonomous physical experiments. Never send the example command topic to real hardware without verifying mapping and limits.
 
-## Safety and reproducibility
-Test the physical robot on a clear, level surface. Record firmware, servo calibration, battery state, ROS 2 distribution, command parameters, and trial conditions for each experiment.
+## License
+MIT starter code; check third-party dependencies separately.
